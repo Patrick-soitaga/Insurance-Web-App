@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Maryuko Insurance Agency provides reliable insurance solutions for you">
+        <meta name="keywords" content="General insurance">
+        <meta name="author" content="Patrick Soitaga Dikirr">
+
+        <title>Get a Quote - Maryuko Insurance Agency</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="logo-container" style="height: 190px;">
+                <div class="hexagon">
+                    <div class="bars">
+                        <div class="trapezoidal-bar" style="height: 65px;"></div>
+                        <div class="bar" style="height: 40px;"></div>
+                        <div class="angled-bar" style="height: 67px;"></div>
+                    </div>
+                </div>
+                <div class="logo-texts">
+                    <div class="logo-text">MARYANN</div>
+                    <div class="sub-text">INSURANCE AGENCY LTD</div>
+                </div>
+            </div>
+
+        </header>   
+        
+        <main>
+            <section class="hero">
+                <h1 id="hero-quote">Maryann Insurance Agency Quotation Portal</h1>
+                <p class="quote-subtext">Get your insurance quote instantly</p>
+            </section>
+
+            <section class="quote-section">
+                <h2>Get a Quote</h2>
+                <form action="#" id="quoteForm" method="POST" autocomplete="on" enctype="multipart/form-data" target="_self">
+                    <div>                 
+                        <div class="quote-form">
+                            <fieldset class="field">
+                                <legend class="form-legend">Personal Information</legend>
+                                <div class="field-info">
+                                    <label for="name">Full Name:</label>
+                                    <input type="text" id="name" name="Full-Name" placeholder="John Doe" required>
+                                </div>
+                                <div class="field-info"> 
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="text" id="phone" name="Phone-number" placeholder="0700 123 456" required>
+                                </div>
+                                <div class="field-info">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="Email" placeholder="john.doe@example.com" required>
+                                </div>
+                                <div class="field-info">    
+                                    <label for="underwriter">Underwriter:</label>
+                                    <input type="text" id="underwriter" name="Insurer" placeholder="Underwriter Name" required>
+                                </div>
+                            </fieldset>
+                            <fieldset class="field">
+                                <legend class="form-legend">Insurance Details</legend>
+                                <label for="insuranceType">Insurance Type:</label>
+                                <select id="insuranceType">
+                                    <option value="motor">Motor Insurance</option>
+                                    <option value="pa">Personal Accident</option>
+                                    <option value="wiba">WIBA</option>
+                                </select>
+                            </fieldset>
+                            <fieldset class="field">
+                                <legend class="form-legend">Vehicle Information</legend>
+                                <label for="vehicleType">Vehicle Reg No.:</label>
+                                <input type="text" id="vehicleType" placeholder="KAA 123A" name="typeOfVehicle" required>
+                                <label for="vehicleMake">Vehicle Make:</label>
+                                <input type="text" id="vehicleMake" placeholder="Toyota" name="vehicleMake" required>
+                                <label for="vehicleModel">Vehicle Model:</label>
+                                <input type="text" id="vehicleModel" placeholder="Camry" name="vehicleModel" required>
+                                <label for="vehicleChasis">Vehicle Chasis No.:</label>
+                                <input type="text" id="vehicleChasis" name="chassisNumber" required>
+                                <label for="year">Year of Manufacture:</label>
+                                <input type="number" id="year" min="1900" name="manufactureYear" required>        
+                            </fieldset>
+
+                            <fieldset class="field">
+                                <legend class="form-legend">Coverage Options</legend>
+                                <div class="checkbox-row">
+                                    <label for="thirdParty">
+                                        <input  type="radio" id="thirdParty" name="coverType" value="thirdParty">
+                                        Third Party
+                                    </label>
+                                    <label for="comprehensive">
+                                        <input checked type="radio" name="coverType" id="comprehensive" value="comprehensive">
+                                        Comprehensive
+                                    </label>
+                                    <label for="thirdPartyFireTheft">
+                                        <input type="radio" name="coverType" id="thirdPartyFireTheft" value="thirdPartyFireTheft">
+                                        Third Party, Fire & Theft
+                                    </label>
+                                </div>    
+                            </fieldset>
+
+                            <fieldset class="field" id="riderSection">
+                                <legend class="form-legend">Optional Riders</legend>
+                                <div class="checkbox-row">
+                                    <label for="windscreen">
+                                        <input checked type="checkbox" name="additionalCoverage" id="windScreen" value="windscreen">
+                                        Windscreen Cover
+                                    </label>
+                                    <label for="excessProtector">
+                                        <input type="checkbox" name="additionalCoverage" id="excessProtector" value="excessProtector">
+                                        Excess Protector
+                                    </label>
+                                    <label for="entertainmentSystem">
+                                        <input type="checkbox" id="entertainmentSystem" name="additionalCoverage" value="entertainmentSystem">
+                                        Entertainment System
+                                    </label>
+
+                                    <label for="politicalViolence">
+                                        <input type="checkbox" id="politicalViolence" name="additionalCoverage" value="politicalViolence">
+                                        Political Violence, Sabbotage & Terrorism
+                                    </label>
+                                </div>
+
+                               </fieldset>    
+
+
+                            <fieldset class="field">
+                                <legend class="form-legend">Financial Information</legend>
+                                <label for="value">Sum Insured / Vehicle Value:</label>
+                                <input type="number" id="value" min="0" name="vehicleValue" placeholder="1000000" required>
+                            </fieldset>
+                        </div>  
+                        <button type="submit">Calculate Premium</button>
+
+                    </div>  
+                </form>
+                <h3 id="result"></h3>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Maryann Insurance Agency. All Rights Reserved.</p>
+            <p>Phone: +254 723 888 851 | Email: <a href="mailto:info@maryukoinsuranceagency.com">info@maryukoinsuranceagency.com</a></p>
+            <p>Follow us on: Facebook | Instagram | LinkedIn</p>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

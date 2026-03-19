@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Maryuko Insurance Agency provides reliable insurance solutions for you">
+        <meta name="keywords" content="General insurance">
+        <meta name="author" content="Patrick Soitaga Dikirr">
+
+        <title>Certificate Processing - Maryuko Insurance Agency</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="logo-container" style="height: 190px;">
+                <div class="hexagon">
+                    <div class="bars">
+                        <div class="trapezoidal-bar" style="height: 65px;"></div>
+                        <div class="bar" style="height: 40px;"></div>
+                        <div class="angled-bar" style="height: 67px;"></div>
+                    </div>
+                </div>
+                <div class="logo-texts">
+                    <div class="logo-text">MARYANN</div>
+                    <div class="sub-text">INSURANCE AGENCY LTD</div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section type="new-business">
+                <h2>New Business</h2>
+                <form action="#" id="certificateForm" method="POST" autocomplete="on" enctype="multipart/form-data" target="_self">
+                    <div class="cert-issuance">
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Type of Business</legend>
+                            <label for="businessType">Select Business Type:</label>
+                            <select id="businessType" name="Business-Type" required >
+                                <option value="">-- Direct --</option>
+                                <option value="direct">Direct</option>
+                                <option value="indirect">Obtained through an intermediary</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Type of the Policy</legend>
+                            <label for="policyType">Select Policy Type
+                                <input type="radio" id="policyType" name="Policy-Type" value="life" required>
+                                Third Party:
+                            </label>
+                            <label for="policyType">
+                                <input type="radio" id="policyType" name="Policy-Type" value="motor" required>
+                                Comprehensive:
+                            </label>
+                            <label for="policyType">
+                                <input type="radio" id="policyType" name="Policy-Type" value="property" required>
+                                Third Party, Fire and Theft:
+                            </label>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Policyholder Information</legend>
+                            <label for="policyholderName">Full Name:</label>
+                            <input type="text" id="policyholderName" placeholder="Enter full name as it appears on the id/passport, e.g John Doe" name="Policyholder-Name" required>
+                            <label for="policyholderID">ID/Passport Number:</label>
+                            <input type="text" id="policyholderID" placeholder="Enter ID/Passport number, e.g 12345678" name="Policyholder-ID" required>
+                            <label for="policyholderPhone">Phone Number:</label>
+                            <input type="text" id="policyholderPhone" placeholder="0700123456" name="Policyholder-Phone" required>
+                            <label for="policyholderEmail">Email:</label>
+                            <input type="email" id="policyholderEmail" placeholder="john.doe@example.com" name="Policyholder-Email" required>
+                            <label for="kraPin">KRA PIN:</label>
+                            <input type="text" id="kraPin" placeholder="A000000000A" name="KRA-PIN" required>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Policy Details</legend>
+                            <label for="policyNumber">Policy Number:</label>
+                            <input type="text" id="policyNumber" placeholder="Enter policy number, e.g POL123456" name="Policy-Number" required>
+                            <label for="policyStartDate">Policy Start Date:</label>
+                            <input type="date" id="policyStartDate" name="Policy-Start-Date" required>
+                            <label for="policyEndDate">Policy End Date:</label>
+                            <input type="date" id="policyEndDate" name="Policy-End-Date" required>
+                            <label for="sumInsured">Sum Insured (Ksh):</label>
+                            <input type="number" id="sumInsured" placeholder="Enter sum insured in Ksh, e.g 500000" name="Sum-Insured" required>
+                        </fieldset>
+
+                        <fieldset class="certissuance-field">
+
+                            <legend class="form-legend">Vehicle Information</legend>
+                            <label for="vehicleRegNo">Vehicle Reg No.:</label>
+                            <input type="text" id="vehicleRegNo" placeholder="Enter vehicle registration number, e.g KAA 123A" name="Vehicle-Reg-No" required>
+                            <label for="vehicleChasis">Vehicle Chasis No.:</label>
+                            <input type="text" id="vehicleChasis" placeholder="Enter vehicle chasis number, e.g 1HGBH41JXMN109186" name="Vehicle-Chasis" required>
+                            <label for="vehicleMake">Vehicle Make:</label>
+                            <input type="text" id="vehicleMake" placeholder="Enter vehicle make, e.g Toyota" name="Vehicle-Make" required>
+                            <label for="vehicleModel">Vehicle Model:</label>
+                            <input type="text" id="vehicleModel" placeholder="Enter vehicle model, e.g Corolla" name="Vehicle-Model" required>
+                            <label for="vehicleYear">Year of Manufacture:</label>
+                            <input type="number" id="vehicleYear" placeholder="Enter year of manufacture, e.g 2020" name="Vehicle-Year" required>
+                            <label for="vehicleValue">Vehicle Value (Ksh):</label>
+                            <input type="number" id="vehicleValue" placeholder="Enter vehicle value in Ksh, e.g 500000" name="Vehicle-Value" required>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Payment Information</legend>
+                            <label for="paymentMethod">Payment Method:</label>
+                            <select id="paymentMethod" name="Payment-Method" required>
+                                <option value="">Select Payment Method</option>
+                                <option value="cash">Mpesa</option>
+                                <option value="bank_transfer">Bank Transfer</option>
+                            </select>
+                            <label for="amountPaid">Amount Paid (Ksh):</label>
+                            <input type="number" id="amountPaid" min="0" placeholder="Enter amount paid in Ksh, e.g 50000" name="Amount-Paid" required>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Additional Information</legend>
+                            <label for="additionalInfo">Additional Information:</label>
+                            <textarea id="additionalInfo" placeholder="Enter any additional information relevant to the policy" name="Additional-Information"></textarea>
+
+                    </div>
+                </form>
+            </section>
+            
+            <section type="endorsements-extensions">
+                <h2>Endorsements & Extensions</h2>
+                <form action="#" id="certificateForm" method="POST" autocomplete="on" enctype="multipart/form-data" target="_self">
+                    <div class="cert-issuance">
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Type of Business</legend>
+                            <label for="businessType">Select Business Type:</label>
+                            <select id="businessType" name="Business-Type" required >
+                                <option value="">-- Direct --</option>
+                                <option value="direct">Direct</option>
+                                <option value="indirect">Obtained through an intermediary</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Type of the Policy</legend>
+                            <label for="policyType">Select Policy Type
+                                <input type="radio" id="policyType" name="Policy-Type" value="life" required>
+                                Third Party:
+                            </label>
+                            <label for="policyType">
+                                <input type="radio" id="policyType" name="Policy-Type" value="motor" required>
+                                Comprehensive:
+                            </label>
+                            <label for="policyType">
+                                <input type="radio" id="policyType" name="Policy-Type" value="property" required>
+                                Third Party, Fire and Theft:
+                            </label>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Policyholder Information</legend>
+                            <label for="policyholderName">Full Name:</label>
+                            <input type="text" id="policyholderName" placeholder="Enter full name as it appears on the id/passport, e.g John Doe" name="Policyholder-Name" required>
+                            <label for="policyholderID">ID/Passport Number:</label>
+                            <input type="text" id="policyholderID" placeholder="Enter ID/Passport number, e.g 12345678" name="Policyholder-ID" required>
+                            <label for="policyholderPhone">Phone Number:</label>
+                            <input type="text" id="policyholderPhone" placeholder="0700123456" name="Policyholder-Phone" required>
+                            <label for="policyholderEmail">Email:</label>
+                            <input type="email" id="policyholderEmail" placeholder="john.doe@example.com" name="Policyholder-Email" required>
+                            <label for="kraPin">KRA PIN:</label>
+                            <input type="text" id="kraPin" placeholder="A000000000A" name="KRA-PIN" required>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Policy Details</legend>
+                            <label for="policyNumber">Policy Number:</label>
+                            <input type="text" id="policyNumber" placeholder="Enter policy number, e.g POL123456" name="Policy-Number" required>
+                            <label for="policyStartDate">Policy Start Date:</label>
+                            <input type="date" id="policyStartDate" name="Policy-Start-Date" required>
+                            <label for="policyEndDate">Policy End Date:</label>
+                            <input type="date" id="policyEndDate" name="Policy-End-Date" required>
+                            <label for="sumInsured">Sum Insured (Ksh):</label>
+                            <input type="number" id="sumInsured" placeholder="Enter sum insured in Ksh, e.g 500000" name="Sum-Insured" required>
+                        </fieldset>
+
+                        <fieldset class="certissuance-field">
+
+                            <legend class="form-legend">Vehicle Information</legend>
+                            <label for="vehicleRegNo">Vehicle Reg No.:</label>
+                            <input type="text" id="vehicleRegNo" placeholder="Enter vehicle registration number, e.g KAA 123A" name="Vehicle-Reg-No" required>
+                            <label for="vehicleChasis">Vehicle Chasis No.:</label>
+                            <input type="text" id="vehicleChasis" placeholder="Enter vehicle chasis number, e.g 1HGBH41JXMN109186" name="Vehicle-Chasis" required>
+                            <label for="vehicleMake">Vehicle Make:</label>
+                            <input type="text" id="vehicleMake" placeholder="Enter vehicle make, e.g Toyota" name="Vehicle-Make" required>
+                            <label for="vehicleModel">Vehicle Model:</label>
+                            <input type="text" id="vehicleModel" placeholder="Enter vehicle model, e.g Corolla" name="Vehicle-Model" required>
+                            <label for="vehicleYear">Year of Manufacture:</label>
+                            <input type="number" id="vehicleYear" placeholder="Enter year of manufacture, e.g 2020" name="Vehicle-Year" required>
+                            <label for="vehicleValue">Vehicle Value (Ksh):</label>
+                            <input type="number" id="vehicleValue" placeholder="Enter vehicle value in Ksh, e.g 500000" name="Vehicle-Value" required>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Payment Information</legend>
+                            <label for="paymentMethod">Payment Method:</label>
+                            <select id="paymentMethod" name="Payment-Method" required>
+                                <option value="">Select Payment Method</option>
+                                <option value="cash">Mpesa</option>
+                                <option value="bank_transfer">Bank Transfer</option>
+                            </select>
+                            <label for="amountPaid">Amount Paid (Ksh):</label>
+                            <input type="number" id="amountPaid" min="0" placeholder="Enter amount paid in Ksh, e.g 50000" name="Amount-Paid" required>
+                        </fieldset>
+                        <fieldset class="certissuance-field">
+                            <legend class="form-legend">Additional Information</legend>
+                            <label for="additionalInfo">Additional Information:</label>
+                            <textarea id="additionalInfo" placeholder="Enter any additional information relevant to the policy" name="Additional-Information"></textarea>
+
+                    </div>
+                </form>
+            </section>
+                
+            
+            </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Maryann Insurance Agency. All Rights Reserved.</p>
+            <p>Phone: +254 723 888 851 | Email: <a href="mailto:info@maryukoinsuranceagency.com">info@maryukoinsuranceagency.com</a></p>
+            <p>Follow us on: Facebook | Instagram | LinkedIn</p>
+        </footer>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
